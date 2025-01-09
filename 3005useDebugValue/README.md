@@ -1,9 +1,10 @@
 # useDebugValue
 
-Файлів, що використовують useDebugValue: 0
-Версія React, в якій було вперше представлено хук: 16.8
+**Файлів, що використовують useDebugValue:** 0
 
-Interface: `useDebugValue(value, format?)`
+**Версія React, в якій було вперше представлено хук:** 16.8
+
+**Interface:** `useDebugValue(value, format?)`
 
 `useDebugValue` is a React Hook that lets you add a label to a custom Hook in React DevTools.
 
