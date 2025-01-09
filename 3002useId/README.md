@@ -1,9 +1,10 @@
 # useId
 
-Файлів, що використовують `useId`: 4
-Версія React, в якій було вперше представлено хук: 18.0
+**Файлів, що використовують `useId`:** 4
 
-Interface: `const id = useId()`
+**Версія React, в якій було вперше представлено хук:** 18.0
+
+**Interface:** `const id = useId()`
 
 `useId` is a React Hook for generating unique IDs that can be passed to accessibility attributes.
 
