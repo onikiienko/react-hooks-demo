@@ -3,11 +3,6 @@
 
 #### Як ми жили раніше?
 
-- Ми називали функціональні компоненти "stateless".
-- Ми мали купу методів життєвого циклу в класових компонентах(componentDidMount, componentDidUpdate, componentWillUnmount). Де мали самостійно вирішувати багато речей. Досить не схоже на декларативний підхід React.
-- Доводилось мати справу з HOC (Higher Order Components) та Render Props.
-- Тестування класових компонентів було складнішим.
-
 Класовий компонент:
 
 ```jsx
@@ -54,6 +49,12 @@ function Counter() {
   return <button onClick={() => setCount(count + 1)}>{count}</button>;
 }
 ```
+---
+
+- Ми називали функціональні компоненти "stateless".
+- Ми мали купу методів життєвого циклу в класових компонентах(componentDidMount, componentDidUpdate, componentWillUnmount). Де мали самостійно вирішувати багато речей. Досить не схоже на декларативний підхід React.
+- Доводилось мати справу з HOC (Higher Order Components) та Render Props.
+- Тестування класових компонентів було складнішим.
 
 ---
 
