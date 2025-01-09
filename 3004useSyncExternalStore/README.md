@@ -1,9 +1,10 @@
 # useSyncExternalStore
 
-Файлів, що використовують `useSyncExternalStore`: 1
-Версія React, в якій було вперше представлено хук: 18.0
+**Файлів, що використовують `useSyncExternalStore`:** 1
 
-Interface: `const snapshot = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot?)`
+**Версія React, в якій було вперше представлено хук:** 18.0
+
+**Interface:** `const snapshot = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot?)`
 
 `useSyncExternalStore` is a React Hook that lets you subscribe to an external store.
 
