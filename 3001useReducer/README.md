@@ -1,6 +1,7 @@
 # useReducer
 
 **Файлів, що використовують `useReducer`:** 4 
+
 **Версія React, в якій було вперше представлено хук:** 16.8
 
 **Interface:** `const [state, dispatch] = useReducer(reducer, initialArg, init?)`
