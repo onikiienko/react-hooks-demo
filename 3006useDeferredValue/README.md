@@ -1,9 +1,10 @@
 # useDefferedValue
 
-Файлів, що використовують `useDeferredValue`: 0
-Версія React, в якій було вперше представлено хук: 18.0
+**Файлів, що використовують `useDeferredValue`:** 0
 
-Interface: `const deferredValue = useDeferredValue(value)`
+**Версія React, в якій було вперше представлено хук:** 18.0
+
+**Interface:** `const deferredValue = useDeferredValue(value)`
 
 `useDeferredValue` is a React Hook that lets you defer updating a part of the UI.
 
