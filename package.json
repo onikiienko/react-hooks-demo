@@ -1,0 +1,7 @@
+{
+    "name": "react-hooks",
+    "version": "1.0.0",
+    "scripts": {
+      "start-all": "node start-all.js"
+    }
+  }
