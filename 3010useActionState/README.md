@@ -8,5 +8,7 @@
 
 `useActionState` is a Hook that allows you to update the state based on the result of a form action.
 
+Це setState для форми, котрий ще й статуст action знає.
+
 Посилання:
 - [Офіційна документація](https://react.dev/reference/react/useActionState)
