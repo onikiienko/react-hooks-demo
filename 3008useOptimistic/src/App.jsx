@@ -1,6 +1,6 @@
 import { useOptimistic, useState, useRef } from "react";
 
-function Thread({ messages, sendMessage }) {
+function OptimisticThread({ messages, sendMessage }) {
   const formRef = useRef();
   const [optimisticMessages, addOptimisticMessage] = useOptimistic(
     messages,
@@ -37,6 +37,28 @@ function Thread({ messages, sendMessage }) {
   );
 }
 
+function Thread({ messages, sendMessage }) {
+  const formRef = useRef();
+
+  async function formAction(formData) {
+    formRef.current.reset();
+
+    await sendMessage(formData);
+  }
+
+  return (
+    <>
+      {messages.map((message, index) => (
+        <div key={index}>{message.text}</div>
+      ))}
+      <form action={formAction} ref={formRef}>
+        <input type="text" name="message" placeholder="Hello!" />
+        <button type="submit">Send</button>
+      </form>
+    </>
+  );
+}
+
 async function deliverMessage(message) {
   await new Promise((res) => setTimeout(res, 1000));
   return message;
@@ -48,8 +70,12 @@ export default function App() {
   ]);
   async function sendMessage(formData) {
     const sentMessage = await deliverMessage(formData.get("message"));
-    setMessages((messages) => [...messages, { text: sentMessage }]);
+    setMessages((messages) => [
+      ...messages,
+      { text: sentMessage, sending: false },
+    ]);
   }
 
-  return <Thread messages={messages} sendMessage={sendMessage} />;
+  // return <Thread messages={messages} sendMessage={sendMessage} />;
+  return <OptimisticThread messages={messages} sendMessage={sendMessage} />;
 }

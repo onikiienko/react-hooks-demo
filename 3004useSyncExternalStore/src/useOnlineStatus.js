@@ -1,11 +1,7 @@
 import { useSyncExternalStore } from "react";
 
 export function useOnlineStatus() {
-  const isOnline = useSyncExternalStore(
-    subscribe,
-    () => navigator.onLine,
-    () => true,
-  );
+  const isOnline = useSyncExternalStore(subscribe, () => navigator.onLine);
 
   return isOnline;
 }

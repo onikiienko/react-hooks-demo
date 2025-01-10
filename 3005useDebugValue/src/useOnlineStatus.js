@@ -1,11 +1,7 @@
 import { useSyncExternalStore, useDebugValue } from "react";
 
 export function useOnlineStatus() {
-  const isOnline = useSyncExternalStore(
-    subscribe,
-    () => navigator.onLine,
-    () => true,
-  );
+  const isOnline = useSyncExternalStore(subscribe, () => navigator.onLine);
   // useDebugValue(isOnline ? "🟢 Online" : "🔴 Offline");
   return isOnline;
 }

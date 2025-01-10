@@ -7,8 +7,8 @@ export default function App() {
   return (
     <>
       <input value={text} onChange={(e) => setText(e.target.value)} />
-      {/* <SlowList text={text} /> */}
-      <SlowList text={deferredText} />
+      <SlowList text={text} />
+      {/* <SlowList text={deferredText} /> */}
     </>
   );
 }

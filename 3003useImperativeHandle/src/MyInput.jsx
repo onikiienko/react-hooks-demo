@@ -8,18 +8,17 @@ function MyInput({ ref, ...props }) {
     () => {
       return {
         focus() {
-          console.log("focus");
           inputRef.current.focus();
         },
-        get value() {
-          return inputRef.current.value;
-        },
+        // get value() {
+        //   return inputRef.current.value;
+        // },
       };
     },
     [],
   );
 
-  return <input {...props} ref={inputRef} />;
+  return <input ref={inputRef} {...props} />;
 }
 
 export default MyInput;

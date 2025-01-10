@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useFormStatus } from "react-dom";
 
 async function submitForm() {
-  await new Promise((res) => setTimeout(res, 2000));
+  await new Promise((res) => setTimeout(res, 5000));
 }
 
 function UsernameForm() {

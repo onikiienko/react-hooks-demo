@@ -5,15 +5,21 @@ function App() {
   const [text, setText] = useState("");
 
   const handleClick = () => {
-    startTransition(async () => {
+    console.log("Transition started!");
+
+    (async () => {
       await new Promise((resolve) => setTimeout(resolve, 3000));
       console.log("Transition complete!");
-    });
+    })();
+
+    // startTransition(async () => {
+    //   await new Promise((resolve) => setTimeout(resolve, 3000));
+    //   console.log("Transition complete!");
+    // });
   };
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>useTransition Example</h1>
       <input
         type="text"
         value={text}
@@ -21,9 +27,10 @@ function App() {
         placeholder="Type something..."
         style={{ marginBottom: "10px", padding: "5px", width: "100%" }}
       />
-      <button onClick={handleClick} disabled={isPending}>
+      <button onClick={handleClick}>Start Transition</button>
+      {/* <button onClick={handleClick} disabled={isPending}>
         {isPending ? "Loading..." : "Start Transition"}
-      </button>
+      </button> */}
     </div>
   );
 }
